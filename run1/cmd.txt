@@ -1,0 +1,2 @@
+docker run -p 10.0.75.1:8000:80 mod_wsgi_test --access-log --log-to-terminal test.wsgi --queue-timeout=10 --processes=1 --threads=1
+python3.7 experiment.py

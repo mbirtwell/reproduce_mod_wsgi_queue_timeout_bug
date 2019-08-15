@@ -1,0 +1,33 @@
+Server URL         : http://localhost/
+Server Root        : /tmp/mod_wsgi-localhost:80:0
+Server Conf        : /tmp/mod_wsgi-localhost:80:0/httpd.conf
+Error Log File     : /dev/stderr (warn)
+Access Log File    : /dev/stdout
+Startup Log File   : /dev/stderr
+Request Capacity   : 1 (1 process * 1 threads)
+Request Timeout    : 30 (seconds)
+Startup Timeout    : 15 (seconds)
+Queue Backlog      : 100 (connections)
+Queue Timeout      : 10 (seconds)
+Server Capacity    : 20 (event/worker), 20 (prefork)
+Server Backlog     : 500 (connections)
+Locale Setting     : en_US.UTF-8
+[Thu Aug 15 11:59:03.670612 2019] [mpm_event:notice] [pid 14:tid 140235669493504] AH00489: Apache/2.4.41 (Unix) mod_wsgi/4.6.7 Python/2.7 configured -- resuming normal operations
+[Thu Aug 15 11:59:03.670708 2019] [core:notice] [pid 14:tid 140235669493504] AH00094: Command line: 'httpd (mod_wsgi-express) -f /tmp/mod_wsgi-localhost:80:0/httpd.conf -E /dev/stderr -D MOD_WSGI_ACCESS_LOG -D MOD_WSGI_MULTIPROCESS -D MOD_WSGI_MPM_ENABLE_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_EVENT_MODULE -D MOD_WSGI_MPM_EXISTS_WORKER_MODULE -D MOD_WSGI_MPM_EXISTS_PREFORK_MODULE -D FOREGROUND'
+[Thu Aug 15 11:59:34.438835 2019] [wsgi:error] [pid 16:tid 140235486168832] [remote 172.17.0.1:52120] mod_wsgi (pid=16): Queue timeout expired for WSGI daemon process 'localhost:80'.
+172.17.0.1 - - [15/Aug/2019:11:59:14 +0000] "GET /delay/20/long HTTP/1.1" 200 12
+[Thu Aug 15 12:00:04.883016 2019] [wsgi:error] [pid 16:tid 140235669493504] mod_wsgi (pid=16): Failed to get current frames for active threads.
+172.17.0.1 - - [15/Aug/2019:11:59:24 +0000] "GET /delay/2/short0 HTTP/1.1" 500 531
+[Thu Aug 15 12:00:09.886148 2019] [wsgi:error] [pid 34:tid 140235669219072] [client 172.17.0.1:52120] Truncated or oversized response headers received from daemon process 'localhost:80': /tmp/mod_wsgi-localhost:80:0/htdocs/delay
+[Thu Aug 15 12:00:10.854388 2019] [wsgi:error] [pid 48:tid 140235487049472] [remote 172.17.0.1:52124] mod_wsgi (pid=48): Queue timeout expired for WSGI daemon process 'localhost:80'.
+172.17.0.1 - - [15/Aug/2019:11:59:34 +0000] "GET /delay/2/short1 HTTP/1.1" 504 247
+[Thu Aug 15 12:00:34.458424 2019] [wsgi:error] [pid 34:tid 140235668952832] [client 172.17.0.1:52124] Timeout when reading response headers from daemon process 'localhost:80': /tmp/mod_wsgi-localhost:80:0/htdocs/delay
+[Thu Aug 15 12:00:34.458925 2019] [wsgi:error] [pid 48:tid 140235487049472] [remote 172.17.0.1:52126] mod_wsgi (pid=48): Queue timeout expired for WSGI daemon process 'localhost:80'.
+172.17.0.1 - - [15/Aug/2019:11:59:44 +0000] "GET /delay/2/short2 HTTP/1.1" 504 247
+[Thu Aug 15 12:00:44.480572 2019] [wsgi:error] [pid 34:tid 140235668686592] [client 172.17.0.1:52126] Timeout when reading response headers from daemon process 'localhost:80': /tmp/mod_wsgi-localhost:80:0/htdocs/delay
+[Thu Aug 15 12:00:44.481060 2019] [wsgi:error] [pid 48:tid 140235487049472] [remote 172.17.0.1:52128] mod_wsgi (pid=48): Queue timeout expired for WSGI daemon process 'localhost:80'.
+[Thu Aug 15 12:00:54.468624 2019] [wsgi:error] [pid 34:tid 140235668420352] [client 172.17.0.1:52128] Timeout when reading response headers from daemon process 'localhost:80': /tmp/mod_wsgi-localhost:80:0/htdocs/delay
+172.17.0.1 - - [15/Aug/2019:11:59:54 +0000] "GET /delay/2/short3 HTTP/1.1" 504 247
+[Thu Aug 15 12:00:54.469390 2019] [wsgi:error] [pid 48:tid 140235487049472] [remote 172.17.0.1:52130] mod_wsgi (pid=48): Queue timeout expired for WSGI daemon process 'localhost:80'.
+172.17.0.1 - - [15/Aug/2019:12:00:04 +0000] "GET /delay/2/short4 HTTP/1.1" 504 247
+[Thu Aug 15 12:01:04.482732 2019] [wsgi:error] [pid 34:tid 140235668154112] [client 172.17.0.1:52130] Timeout when reading response headers from daemon process 'localhost:80': /tmp/mod_wsgi-localhost:80:0/htdocs/delay

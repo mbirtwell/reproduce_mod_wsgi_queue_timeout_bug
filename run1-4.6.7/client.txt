@@ -1,0 +1,4 @@
+2019-08-15 12:53:23,713 Starting request long
+2019-08-15 12:53:24,215 Starting request short
+2019-08-15 12:53:43,739 Done request long status: 200 in: 20.02531361579895
+2019-08-15 12:54:24,269 Done request short status: 504 in: 60.054267168045044
